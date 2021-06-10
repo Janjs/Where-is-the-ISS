@@ -16,12 +16,14 @@ const App = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://api.open-notify.org/iss-now.json")
+    fetch("https://api.wheretheiss.at/v1/satellites/25544")
       .then((response) => response.json())
-      .then((json) => setIssLoc(json.iss_position))
+      .then((json) => setIssLoc(json))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false));
   }, []);
+
+  console.log(issLoc)
 
   return (
     <div style={style.container} className="App">
