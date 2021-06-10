@@ -4,8 +4,8 @@ import {
   Geographies,
   Geography,
   Marker,
+  ZoomableGroup,
 } from "react-simple-maps";
-import { useWindowDimensions } from "./dimensions.js"
 import React, { useEffect, useState } from "react";
 
 const geoUrl =
@@ -24,27 +24,26 @@ const App = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  console.log(issLoc)
-
-  const { height, width } = useWindowDimensions();
   return (
     <div style={style.container} className="App">
       <h1 style={style.title}>Here is where the ISS 🛰️ is flying over</h1>
       {!isLoading && (
         <div>
-          <ComposableMap width={width} height={height - 100}>
-            <Geographies geography={geoUrl} style={style.map}>
-              {({ geographies }) =>
-                geographies.map((geo) => (
-                  <Geography key={geo.rsmKey} geography={geo} />
-                ))
-              }
-            </Geographies>
-            <Marker coordinates={[issLoc.longitude, issLoc.latitude]}>
-              <text textAnchor="middle" fontSize={16}>
-                🛰️
-              </text>
-            </Marker>
+          <ComposableMap>
+            <ZoomableGroup zoom={1}>
+              <Geographies geography={geoUrl} style={style.map}>
+                {({ geographies }) =>
+                  geographies.map((geo) => (
+                    <Geography key={geo.rsmKey} geography={geo} />
+                  ))
+                }
+              </Geographies>
+              <Marker coordinates={[issLoc.longitude, issLoc.latitude]}>
+                <text textAnchor="middle" fontSize={16}>
+                  🛰️
+                </text>
+              </Marker>
+            </ZoomableGroup>
           </ComposableMap>
         </div>
       )}
