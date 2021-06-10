@@ -30,7 +30,7 @@ const App = () => {
   const { height, width } = useWindowDimensions();
   return (
     <div style={style.container} className="App">
-      <h1 style={style.title}>Here is where the ISS is flying over</h1>
+      <h1 style={style.title}>Here is where the ISS 🛰️ is flying over</h1>
       {!isLoading && (
         <div>
           <ComposableMap width={width} height={height - 100}>

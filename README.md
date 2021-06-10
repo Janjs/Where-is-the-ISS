@@ -10,9 +10,9 @@ Map used from:
 
 https://www.react-simple-maps.io/
 
-How to run:
+How to run (the usual):
 
 ```bash
   npm install
-  yarn run
+  yarn start
 ```
