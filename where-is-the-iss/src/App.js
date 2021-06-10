@@ -4,7 +4,6 @@ import {
   Geographies,
   Geography,
   Marker,
-  ZoomableGroup,
 } from "react-simple-maps";
 import React, { useEffect, useState } from "react";
 
@@ -30,8 +29,7 @@ const App = () => {
       {!isLoading && (
         <div>
           <ComposableMap>
-            <ZoomableGroup zoom={1}>
-              <Geographies geography={geoUrl} style={style.map}>
+              <Geographies geography={geoUrl} style={style.map} width={500}>
                 {({ geographies }) =>
                   geographies.map((geo) => (
                     <Geography key={geo.rsmKey} geography={geo} />
@@ -43,7 +41,6 @@ const App = () => {
                   🛰️
                 </text>
               </Marker>
-            </ZoomableGroup>
           </ComposableMap>
         </div>
       )}
