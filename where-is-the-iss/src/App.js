@@ -41,7 +41,7 @@ const App = () => {
         )
           .then((response) => response.json())
           .then((json) => {
-            if(json.results.length == 0){
+            if(json.results.length === 0){
               setFormattedAddress("prob in the ocean");
             } else {
               setFormattedAddress(json.results[0].formatted_address);
