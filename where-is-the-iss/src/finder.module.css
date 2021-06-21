@@ -1,0 +1,28 @@
+@media only screen and (max-width: 700px) {
+    .finder {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 310px;
+        height: 450px;
+        padding-top: 30px;
+        padding-left: 30px;
+        margin: 2em auto;
+        flex: 1;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .finder {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 310px;
+        height: 450px;
+        position: absolute;
+        z-index: 3;
+        cursor: move;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+}
