@@ -1,2 +1,4 @@
 where-is-the-iss/.env
 where-is-the-iss/node_modules
+.ipynb_checkpoints/
+.DS_Store
