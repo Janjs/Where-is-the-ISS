@@ -12,9 +12,10 @@ Map used from:
 
 https://www.react-simple-maps.io/
 
-How to run (the usual):
+How to run: 
 
 ```bash
+  cd where-is-the-iss
   npm install
   yarn start
 ```
