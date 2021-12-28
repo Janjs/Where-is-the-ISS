@@ -16,6 +16,6 @@ How to run:
 
 ```bash
   cd where-is-the-iss
-  npm install
+  yarn install
   yarn start
 ```
