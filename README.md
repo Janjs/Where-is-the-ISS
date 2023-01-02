@@ -1,7 +1,5 @@
 # Where-is-the-ISS
 
-Demo: https://find-the-iss.netlify.app/
-
 React app that shows where the International Space Station is located at.
 
 Coordinates extracted from:
